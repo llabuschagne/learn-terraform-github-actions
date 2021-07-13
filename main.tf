@@ -42,7 +42,7 @@ resource "aws_instance" "web" {
               EOF
 }
 
-resource "aws_security_group" "web-sg" {
+resource "aws_security_group" "pypi-security-group" {
   name = "${random_pet.sg.id}-sg"
   ingress {
     from_port   = 8080

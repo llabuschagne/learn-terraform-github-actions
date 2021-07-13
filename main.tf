@@ -9,7 +9,7 @@ terraform {
       version = "3.0.1"
     }
   }
-  required_version = ">=0.13, <0.14"
+  required_version = "~> 1.0.2"
 
   backend "remote" {
     organization = "example-org-6179d9"

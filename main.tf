@@ -3,6 +3,8 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "3.26.0"
+      profile = "awml"
+      region  = "us-west-2"
     }
     random = {
       source  = "hashicorp/random"
@@ -12,10 +14,10 @@ terraform {
   required_version = "~> 0.14"
 
   backend "remote" {
-    organization = "REPLACE_ME"
+    organization = "example-org-6179d9"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "learn-terraform-github-actions"
     }
   }
 }

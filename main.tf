@@ -9,20 +9,21 @@ terraform {
       version = "3.0.1"
     }
   }
-  required_version = "~> 0.14"
+  required_version = "~> 1.0.2"
 
   backend "remote" {
-    organization = "REPLACE_ME"
+    organization = "example-org-6179d9"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "learn-terraform-github-actions"
     }
   }
 }
 
 
 provider "aws" {
-  region = "us-west-2"
+  profile = "awml"
+  region  = "us-west-2"
 }
 
 

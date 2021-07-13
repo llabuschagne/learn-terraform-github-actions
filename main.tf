@@ -3,8 +3,6 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "3.26.0"
-      profile = "awml"
-      region  = "us-west-2"
     }
     random = {
       source  = "hashicorp/random"
@@ -24,7 +22,8 @@ terraform {
 
 
 provider "aws" {
-  region = "us-west-2"
+  profile = "awml"
+  region  = "us-west-2"
 }
 
 

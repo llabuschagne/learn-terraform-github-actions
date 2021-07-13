@@ -2,13 +2,19 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.27"
+      version = "3.26.0"
     }
   }
-
   required_version = "~> 1.0.2"
-}
 
+  backend "remote" {
+    organization = "example-org-6179d9"
+
+    workspaces {
+      name = "learn-terraform-github-actions"
+    }
+  }
+}
 provider "aws" {
   profile = "awml"
   region  = "us-west-2"
